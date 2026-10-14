@@ -1,0 +1,22 @@
+[
+  {
+    "image": "/assets/photo-hero.jpg",
+    "alt": "Torben Mucchetti outdoors with guitar"
+  },
+  {
+    "image": "/assets/photo-bw-lakeside.jpg",
+    "alt": "Torben playing guitar by the water"
+  },
+  {
+    "image": "/assets/photo-live-duo.jpg",
+    "alt": "Torben performing onstage"
+  },
+  {
+    "image": "/assets/photo-live-band.jpg",
+    "alt": "Torben performing with band"
+  },
+  {
+    "image": "/assets/photo-sunset-seated.jpg",
+    "alt": "Torben playing acoustic guitar at sunset"
+  }
+]

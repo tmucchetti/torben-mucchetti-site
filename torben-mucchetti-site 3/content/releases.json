@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Wishful Thinking",
+    "type": "Single",
+    "image": "/assets/wishful-thinking.jpg",
+    "spotify": "https://open.spotify.com/track/4Q7ZVwHSyr8mtjXZa54bd9",
+    "apple": "https://music.apple.com/us/song/wishful-thinking/6811738813"
+  },
+  {
+    "title": "Light To Lose",
+    "type": "Single",
+    "image": "/assets/light-to-lose.jpg",
+    "spotify": "https://open.spotify.com/track/6Alx2V5MMpnhvIkwiczuCi",
+    "apple": "https://music.apple.com/us/song/light-to-lose/6773801559"
+  },
+  {
+    "title": "American Eyes",
+    "type": "EP",
+    "image": "/assets/american-eyes.jpg",
+    "spotify": "https://open.spotify.com/album/0gGtrAChNvMk2OXcnYIi2E",
+    "apple": "https://music.apple.com/us/album/american-eyes-ep/1857439747"
+  }
+]
