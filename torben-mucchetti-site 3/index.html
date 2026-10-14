@@ -38,6 +38,7 @@
     .nav{display:flex;gap:32px;align-items:center}
     .nav a{font-size:.98rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;transition:color .2s}
     .nav a:hover,.nav a:focus-visible{color:var(--yellow)}
+    .nav .social-nav{font-size:.88rem;color:var(--yellow)}
     .menu-toggle{display:none;background:transparent;color:var(--paper);border:1px solid var(--line);padding:9px 12px}
 
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 24px;border:1px solid var(--orange);font-size:1.08rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;transition:transform .2s, background .2s, color .2s}
@@ -49,13 +50,13 @@
 
     .hero{position:relative;min-height:760px;height:100svh;display:flex;align-items:center;padding-top:76px;overflow:hidden;background:#0f1b26}
     .hero-media{position:absolute;inset:0}
-    .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 28%;filter:saturate(88%) contrast(105%) brightness(.72)}
+    .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 28%;filter:saturate(106%) contrast(103%) brightness(1.04)}
     .hero-overlay{position:absolute;inset:0;background:
-      linear-gradient(90deg, rgba(16,30,42,.96) 0%, rgba(16,30,42,.84) 36%, rgba(16,30,42,.56) 63%, rgba(16,30,42,.78) 100%),
-      linear-gradient(180deg, rgba(119,46,55,.12), rgba(80,54,42,.14) 50%, rgba(16,30,42,.7) 100%)}
+      linear-gradient(90deg, rgba(16,30,42,.68) 0%, rgba(16,30,42,.49) 36%, rgba(16,30,42,.14) 63%, rgba(16,30,42,.30) 100%),
+      linear-gradient(180deg, rgba(119,46,55,.04), rgba(80,54,42,.06) 50%, rgba(16,30,42,.38) 100%)}
     .hero:after{content:"";position:absolute;right:-120px;bottom:-120px;width:420px;height:420px;border:1px solid rgba(242,199,111,.18);border-radius:50%}
     .hero-content{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:40px;align-items:end;width:100%}
-    .hero-copy{padding-top:65px}
+    .hero-copy{padding-top:65px;padding-left:clamp(12px,2.4vw,34px)}
     .hero h1{font-size:clamp(4.8rem,12vw,12rem);line-height:.74;margin:0 0 28px;text-transform:uppercase;font-weight:800}
     .hero h1 em{display:block;color:var(--yellow);font-style:normal;margin-left:clamp(0px,7vw,120px)}
     .hero p{max-width:560px;font-size:clamp(1rem,1.5vw,1.2rem)}
@@ -65,8 +66,6 @@
     .hero-card strong{display:block;font-family:"Barlow Condensed",sans-serif;font-size:1.55rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;color:var(--yellow)}
     .hero-card p{margin:0;font-size:.95rem;color:#e8d7c4}
 
-    .ticker{background:var(--yellow);color:var(--navy);border-top:3px solid var(--brown);overflow:hidden;white-space:nowrap}
-    .ticker div{font-family:"Barlow Condensed",sans-serif;font-weight:800;letter-spacing:.2em;text-transform:uppercase;text-align:center;padding:13px 0}
 
     .section-header{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:34px}
 
@@ -107,7 +106,7 @@
     .about-stack{display:grid;grid-template-rows:1fr 1fr;gap:16px}
     .about-stack .card{position:relative;border:1px solid var(--line);overflow:hidden;min-height:260px;background:#223746}
     .about-stack img{width:100%;height:100%;object-fit:cover}
-    .about-stack .caption,.about-main .caption{position:absolute;left:14px;bottom:14px;background:rgba(16,30,42,.7);padding:8px 10px;font-size:.76rem;letter-spacing:.17em;text-transform:uppercase;color:var(--yellow)}
+    .about-stack .caption,.about-main .caption{display:none;position:absolute;left:14px;bottom:14px;background:rgba(16,30,42,.7);padding:8px 10px;font-size:.76rem;letter-spacing:.17em;text-transform:uppercase;color:var(--yellow)}
     .about-copy p{font-size:1.03rem}
 
     .photos{background:linear-gradient(180deg,#132533,#192f3d)}
@@ -116,7 +115,7 @@
     .photo-card img{width:100%;height:100%;object-fit:cover}
     .photo-card.tall{grid-row:span 2;min-height:560px}
     .photo-card.wide{min-height:300px}
-    .photo-card .label{position:absolute;left:14px;bottom:14px;background:rgba(16,30,42,.72);padding:8px 10px;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow)}
+    .photo-card .label{display:none;position:absolute;left:14px;bottom:14px;background:rgba(16,30,42,.72);padding:8px 10px;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow)}
 
     .contact{background:linear-gradient(180deg,#4b3027,#101e2a)}
     .contact-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:40px;align-items:start}
@@ -176,6 +175,10 @@
     .close-flyer{position:absolute;top:8px;right:8px;border:0;background:var(--navy);color:white;font-size:1.8rem;padding:3px 13px;cursor:pointer}
     @media(max-width:980px){.shows-list{grid-template-columns:1fr}}
     @media(max-width:520px){.show-card{grid-template-columns:112px minmax(0,1fr);gap:14px;padding:12px}.show-flyer,.show-flyer-placeholder{width:112px;height:160px;min-height:160px}.show-information h3{font-size:1.45rem}.show-information .show-date{font-size:1.3rem}}
+    .past-section{margin-top:62px;padding-top:30px;border-top:1px solid var(--line)}
+    .past-section h3{font-size:clamp(2rem,4vw,3.2rem);color:var(--yellow);margin:0 0 22px}
+    .past-section:has(#pastShowsList:empty){display:none}
+    .empty-message{padding:26px 0;color:var(--muted)}
   </style>
 </head>
 <body>
@@ -189,6 +192,8 @@
       <a href="#about">About</a>
       <a href="#photos">Photos</a>
       <a href="#contact">Contact</a>
+      <a class="social-nav" data-social="instagram" href="https://www.instagram.com/torbenmucchettimusic/" target="_blank" rel="noopener noreferrer" aria-label="Torben Mucchetti on Instagram">Instagram ↗</a>
+      <a class="social-nav" data-social="tiktok" href="https://www.tiktok.com/@torbenmucchetti" target="_blank" rel="noopener noreferrer" aria-label="Torben Mucchetti on TikTok">TikTok ↗</a>
     </nav>
   </div>
 </header>
@@ -216,8 +221,6 @@
     </div>
   </section>
 
-  <div class="ticker" aria-hidden="true"><div>Live Music ✦ Original Songs ✦ Country / Rock ✦ Live Music ✦ Original Songs ✦ Country / Rock</div></div>
-
   <section id="shows" class="section shows">
     <div class="wrap">
       <div class="section-header">
@@ -225,9 +228,9 @@
           <div class="eyebrow">Catch a show</div>
           <h2>Upcoming <span style="color:var(--orange)">Shows</span></h2>
         </div>
-        <p class="muted" style="max-width:320px;margin:0">Nothing beats live music. Check back here for upcoming dates and new announcements.</p>
+        
       </div>
-      <div id="showsList" class="shows-list" aria-live="polite"></div>
+      <div id="showsList" class="shows-list" aria-live="polite"></div><div class="past-section"><h3>Past Shows</h3><div id="pastShowsList" class="shows-list" aria-live="polite"></div></div>
       <p class="small-note">For booking inquiries, head to the <a href="#contact" style="color:var(--yellow);text-decoration:underline">contact section</a>.</p>
     </div>
   </section>
@@ -236,10 +239,10 @@
     <div class="wrap">
       <div class="section-header">
         <div>
-          <div class="eyebrow">Turn it up</div>
+          
           <h2>The <span style="color:var(--yellow)">Music</span></h2>
         </div>
-        <p style="max-width:310px;margin:0;color:#e8d8ca">Original songs, honest storytelling, and a little grit.</p>
+        
       </div>
       <div class="stream-links">
         <a class="stream-link spotify" href="https://open.spotify.com/artist/1xbG6N5GtRSyPpsLyMaPr0?si=pV0ER12wRaexLLdDhVjriQ" target="_blank" rel="noopener noreferrer">Listen on Spotify ↗</a>
@@ -254,25 +257,23 @@
       <div class="about-visuals">
         <div class="about-main">
           <img src="assets/photo-sunset-seated.jpg" alt="Torben Mucchetti sitting with guitar outdoors at sunset" />
-          <div class="caption">Acoustic roots</div>
+          
         </div>
         <div class="about-stack">
           <div class="card">
             <img src="assets/photo-live-band.jpg" alt="Torben Mucchetti performing live with a band" />
-            <div class="caption">Live with the band</div>
+            
           </div>
           <div class="card">
             <img src="assets/photo-young-torben.jpg" alt="Young Torben Mucchetti dressed like a cowboy holding a toy guitar" />
-            <div class="caption">Where it started</div>
+            
           </div>
         </div>
       </div>
       <div class="about-copy">
         <div class="eyebrow">Behind the songs</div>
         <h2>About <span style="color:var(--orange)">Torben</span></h2>
-        <p>Torben Mucchetti is a singer-songwriter and guitar player based in Knoxville, Tennessee but born and raised in Bethesda, Maryland. His original music blends acoustic rock and alternative country with blues guitar playing.</p>
-<p>Torben’s sound draws from the storytelling of folk and alt-country and the feel of the blues.</p>
-<p>Whether performing solo or with his band, he brings his all to each performance.</p>
+        <div id="bioText"></div>
         <a class="btn outline" href="#contact">Get in Touch ↗</a>
       </div>
     </div>
@@ -285,15 +286,9 @@
           <div class="eyebrow">A closer look</div>
           <h2>Photo <span style="color:var(--orange)">Gallery</span></h2>
         </div>
-        <p class="muted" style="max-width:330px;margin:0">A mix of outdoor artist shots and live performance moments that bring the project to life.</p>
+        
       </div>
-      <div class="photo-grid">
-        <div class="photo-card tall"><img src="assets/photo-hero.jpg" alt="Torben Mucchetti standing outdoors at dusk with guitar case and guitar" /><div class="label">Sunset session</div></div>
-        <div class="photo-card tall"><img src="assets/photo-bw-lakeside.jpg" alt="Black and white photo of Torben Mucchetti playing guitar by the water" /><div class="label">Lakeside • Black & white</div></div>
-        <div class="photo-card"><img src="assets/photo-live-duo.jpg" alt="Torben Mucchetti performing live on a small stage" /><div class="label">Live performance</div></div>
-        <div class="photo-card wide"><img src="assets/photo-live-band.jpg" alt="Torben Mucchetti performing live outdoors with a band" /><div class="label">Full band set</div></div>
-        <div class="photo-card wide"><img src="assets/photo-sunset-seated.jpg" alt="Torben Mucchetti seated on a guitar case playing acoustic guitar at sunset" /><div class="label">Writing songs after dark</div></div>
-      </div>
+      <div class="photo-grid" id="photoGrid"></div>
     </div>
   </section>
 
@@ -326,6 +321,8 @@
     <div class="footer-stream">
       <a href="https://open.spotify.com/artist/1xbG6N5GtRSyPpsLyMaPr0?si=pV0ER12wRaexLLdDhVjriQ" target="_blank" rel="noopener noreferrer">Spotify ↗</a>
       <a href="https://music.apple.com/us/artist/torben-mucchetti/1816262868" target="_blank" rel="noopener noreferrer">Apple Music ↗</a>
+      <a data-social="instagram" href="https://www.instagram.com/torbenmucchettimusic/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+      <a data-social="tiktok" href="https://www.tiktok.com/@torbenmucchetti" target="_blank" rel="noopener noreferrer">TikTok ↗</a>
     </div>
     <nav class="footer-nav" aria-label="Footer navigation">
       <a href="#shows">Shows</a><a href="#music">Music</a><a href="#about">About</a><a href="#photos">Photos</a><a href="#contact">Contact</a>
@@ -334,32 +331,48 @@
 </footer>
 
 <script>
-const CONTACT_EMAIL='tmucchetti@gmail.com';
-const SHOWS=[
-  {date:'OCT 21',venue:'The Hill',time:'6:30–8:30 PM',format:'Duo with Sky Hatcher',flyer:'assets/flyer-the-hill.jpg'},
-  {date:'OCT 22',venue:'LiterBoard',time:'8–10 PM',format:'Full Band',flyer:'assets/flyer-literboard.jpg'},
-  {date:'OCT 31',venue:'AEII Fraternity Halloween',time:'10 PM–12 AM',format:'Full Band'},
-  {date:'NOV 6',venue:'Bearden Beer Market',time:'7–9 PM',format:'Solo',flyer:'assets/flyer-bearden-beer-market.jpg'},
-  {date:'NOV 13',venue:'Cowboy Cantina',time:'9 PM–12 AM',format:'Solo',flyer:'assets/flyer-cowboy-cantina.jpg'},
-  {date:'NOV 14',venue:'LiterBoard',time:'8–10 PM',format:'Full Band'}
-];
-const RELEASES=[
-  {title:'Wishful Thinking',type:'Single',image:'assets/wishful-thinking.jpg',spotify:'https://open.spotify.com/track/4Q7ZVwHSyr8mtjXZa54bd9',apple:'https://music.apple.com/us/song/wishful-thinking/6811738813'},
-  {title:'Light To Lose',type:'Single',image:'assets/light-to-lose.jpg',spotify:'https://open.spotify.com/track/6Alx2V5MMpnhvIkwiczuCi',apple:'https://music.apple.com/us/song/light-to-lose/6773801559'},
-  {title:'American Eyes',type:'EP',image:'assets/american-eyes.jpg',spotify:'https://open.spotify.com/album/0gGtrAChNvMk2OXcnYIi2E',apple:'https://music.apple.com/us/album/american-eyes-ep/1857439747'}
-];
-const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const showsList=document.getElementById('showsList');
-showsList.innerHTML=SHOWS.map((s,i)=>`<article class="show-card">
-  ${s.flyer?`<img class="show-flyer" src="${escapeHTML(s.flyer)}" alt="Flyer for ${escapeHTML(s.venue)} on ${escapeHTML(s.date)}" loading="lazy" data-flyer="${i}" tabindex="0" role="button" aria-label="Enlarge flyer for ${escapeHTML(s.venue)}" />`:`<div class="show-flyer-placeholder" aria-hidden="true">Live<br>Music</div>`}
-  <div class="show-information"><span class="show-date">${escapeHTML(s.date)} · 2026</span><h3>${escapeHTML(s.venue)}</h3><p class="show-time">${escapeHTML(s.time)}</p><p class="show-format">${escapeHTML(s.format)}</p>${s.flyer?`<button class="flyer-open" type="button" data-flyer="${i}">View flyer ↗</button>`:''}</div>
-</article>`).join('');
+// Contents are edited in Pages CMS; saved changes are committed to your GitHub repository.
+const escapeHTML=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const safeUrl=u=>/^https:\/\//i.test(u||'')?escapeHTML(u):'#';
+let CONTACT_EMAIL='tmucchetti@gmail.com';
+const fetchJSON=async file=>{const res=await fetch('content/'+file+'.json',{cache:'no-cache'});if(!res.ok)throw new Error('Cannot load '+file);return res.json()};
+const dayLabel=s=>{const bits=(s.date||'').split('-').map(Number);if(bits.length!==3)return escapeHTML(s.date||'');return new Intl.DateTimeFormat('en-US',{month:'short',day:'numeric',year:'numeric'}).format(new Date(bits[0],bits[1]-1,bits[2]));};
+function renderShow(s,i){return `<article class="show-card">
+  ${s.flyer?`<img class="show-flyer" src="${escapeHTML(s.flyer)}" alt="Flyer for ${escapeHTML(s.venue)} on ${dayLabel(s)}" loading="lazy" data-flyer="${i}" tabindex="0" role="button" aria-label="Enlarge flyer for ${escapeHTML(s.venue)}" />`:`<div class="show-flyer-placeholder" aria-hidden="true">Live<br>Music</div>`}
+  <div class="show-information"><span class="show-date">${dayLabel(s)}</span><h3>${escapeHTML(s.venue)}</h3><p class="show-time">${escapeHTML(s.time)}</p><p class="show-format">${escapeHTML(s.format)}</p>${s.flyer?`<button class="flyer-open" type="button" data-flyer="${i}">View flyer ↗</button>`:''}${s.tickets?`<a class="flyer-open" href="${safeUrl(s.tickets)}" target="_blank" rel="noopener noreferrer">Tickets ↗</a>`:''}</div>
+</article>`}
 const flyerDialog=document.getElementById('flyerDialog');
 const fullFlyer=document.getElementById('fullFlyer');
-showsList.addEventListener('click',e=>{const trigger=e.target.closest('[data-flyer]');if(!trigger)return;const show=SHOWS[Number(trigger.dataset.flyer)];if(!show?.flyer)return;fullFlyer.src=show.flyer;fullFlyer.alt=`Flyer for ${show.venue} on ${show.date}`;flyerDialog.showModal();});
-showsList.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('img[data-flyer]')){e.preventDefault();e.target.click()}});
+let allShows=[];
+function onFlyerClick(e){const trigger=e.target.closest('[data-flyer]');if(!trigger)return;const show=allShows[Number(trigger.dataset.flyer)];if(!show?.flyer)return;fullFlyer.src=show.flyer;fullFlyer.alt=`Flyer for ${show.venue} on ${show.date}`;flyerDialog.showModal()}
+for(const id of ['showsList','pastShowsList']){
+ const el=document.getElementById(id);
+ el.addEventListener('click',onFlyerClick);
+ el.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('img[data-flyer]')){e.preventDefault();e.target.click()}});
+}
 flyerDialog.addEventListener('click',e=>{if(e.target===flyerDialog)flyerDialog.close()});
-document.getElementById('musicGrid').innerHTML=RELEASES.map(r=>`<article class="release"><div class="cover"><img src="${escapeHTML(r.image)}" alt="${escapeHTML(r.title)} cover art by Torben Mucchetti" loading="lazy" /></div><div class="release-meta"><h3>${escapeHTML(r.title)}</h3><p>${escapeHTML(r.type)}</p><div class="release-actions"><a href="${escapeHTML(r.spotify)}" target="_blank" rel="noopener noreferrer">Spotify ↗</a><a href="${escapeHTML(r.apple)}" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></div></div></article>`).join('');
+async function loadContent(){
+ try{
+  const [shows,releases,site,photos]=await Promise.all(['shows','releases','site','photos'].map(fetchJSON));
+  const nowET=new Intl.DateTimeFormat('sv-SE',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(new Date()).replace(' ','T');
+  allShows=shows.slice().sort((a,b)=>new Date(a.start)-new Date(b.start));
+  const indexed=allShows.map((s,i)=>({s,i}));
+  // A gig remains upcoming until its finishing time, including shows ending after midnight.
+  const upcoming=indexed.filter(({s})=>s.end>nowET).sort((a,b)=>new Date(a.s.start)-new Date(b.s.start));
+  const past=indexed.filter(({s})=>s.end<=nowET).sort((a,b)=>new Date(b.s.start)-new Date(a.s.start));
+  document.getElementById('showsList').innerHTML=upcoming.length?upcoming.map(({s,i})=>renderShow(s,i)).join(''):'<p class="empty-message">More show dates coming soon.</p>';
+  document.getElementById('pastShowsList').innerHTML=past.map(({s,i})=>renderShow(s,i)).join('');
+  document.getElementById('musicGrid').innerHTML=releases.map(r=>`<article class="release"><div class="cover"><img src="${escapeHTML(r.image)}" alt="${escapeHTML(r.title)} cover art" loading="lazy" /></div><div class="release-meta"><h3>${escapeHTML(r.title)}</h3><p>${escapeHTML(r.type)}</p><div class="release-actions"><a href="${safeUrl(r.spotify)}" target="_blank" rel="noopener noreferrer">Spotify ↗</a><a href="${safeUrl(r.apple)}" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></div></div></article>`).join('');
+  document.getElementById('bioText').innerHTML=(site.bio||[]).map(line=>`<p>${escapeHTML(line)}</p>`).join('');
+  document.getElementById('photoGrid').innerHTML=photos.map((p,i)=>`<div class="photo-card ${i<2?'tall':i>2?'wide':''}"><img src="${escapeHTML(p.image)}" alt="${escapeHTML(p.alt||'Photo of Torben Mucchetti')}" loading="lazy" /></div>`).join('');
+  CONTACT_EMAIL=site.email||CONTACT_EMAIL;
+  const mail=document.getElementById('emailLink');mail.href='mailto:'+CONTACT_EMAIL;mail.textContent=CONTACT_EMAIL+' ↗';
+  document.querySelectorAll('a[href*="open.spotify.com/artist/"]').forEach(a=>a.href=safeUrl(site.spotify));
+  document.querySelectorAll('a[href*="music.apple.com/us/artist/"]').forEach(a=>a.href=safeUrl(site.apple));
+  for(const platform of ["instagram","tiktok"]){document.querySelectorAll(`[data-social="${platform}"]`).forEach(a=>a.href=safeUrl(site[platform]));}
+ }catch(err){console.error(err);document.getElementById('showsList').innerHTML='<p class="empty-message">Content could not be loaded. Please open this site through a web server, not directly as a local file.</p>'}
+}
+loadContent();
 const nav=document.getElementById('nav');
 const menu=document.getElementById('menuToggle');
 menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))});
