@@ -1,0 +1,103 @@
+media:
+  input: torben-mucchetti-site 3/assets
+  output: /assets
+  rename: safe
+content:
+  - name: shows
+    label: Shows & Flyers
+    type: file
+    path: torben-mucchetti-site 3/content/shows.json
+    format: json
+    list: true
+    fields:
+      - name: date
+        label: Show date (YYYY-MM-DD)
+        type: string
+        required: true
+      - name: start
+        label: Start date/time (YYYY-MM-DDTHH:MM:SS)
+        type: string
+        required: true
+      - name: end
+        label: End date/time (YYYY-MM-DDTHH:MM:SS)
+        type: string
+        required: true
+        description: For shows ending after midnight, enter the next calendar day.
+      - name: venue
+        label: Venue / Event
+        type: string
+        required: true
+      - name: time
+        label: Displayed time (e.g. 8–10 PM)
+        type: string
+        required: true
+      - name: format
+        label: Lineup / Details
+        type: string
+      - name: flyer
+        label: Flyer (optional)
+        type: image
+      - name: tickets
+        label: Ticket URL (optional)
+        type: string
+  - name: releases
+    label: Music Releases
+    type: file
+    path: torben-mucchetti-site 3/content/releases.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Release title
+        type: string
+        required: true
+      - name: type
+        label: Single / EP / Album
+        type: string
+      - name: image
+        label: Cover artwork
+        type: image
+      - name: spotify
+        label: Spotify direct link
+        type: string
+      - name: apple
+        label: Apple Music direct link
+        type: string
+  - name: site
+    label: Bio & Contact
+    type: file
+    path: torben-mucchetti-site 3/content/site.json
+    format: json
+    fields:
+      - name: bio
+        label: About paragraphs
+        type: text
+        list: true
+      - name: email
+        label: Booking email
+        type: string
+      - name: spotify
+        label: Spotify artist profile
+        type: string
+      - name: apple
+        label: Apple Music artist profile
+        type: string
+      - name: instagram
+        label: Instagram profile
+        type: string
+      - name: tiktok
+        label: TikTok profile
+        type: string
+  - name: photos
+    label: Photo Gallery
+    type: file
+    path: torben-mucchetti-site 3/content/photos.json
+    format: json
+    list: true
+    fields:
+      - name: image
+        label: Photo
+        type: image
+      - name: alt
+        label: Photo description for accessibility
+        type: string
