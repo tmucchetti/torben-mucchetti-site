@@ -6,8 +6,7 @@
     "venue": "The Hill",
     "time": "6:30–8:30 PM",
     "format": "Duo with Sky Hatcher",
-    "flyer": "/assets/flyer-the-hill.jpg",
-    "tickets": ""
+    "flyer": "/assets/flyer-the-hill.jpg"
   },
   {
     "date": "2026-10-22",
@@ -16,8 +15,7 @@
     "venue": "LiterBoard",
     "time": "8–10 PM",
     "format": "Full Band",
-    "flyer": "/assets/flyer-literboard.jpg",
-    "tickets": ""
+    "flyer": "/assets/flyer-literboard.jpg"
   },
   {
     "date": "2026-10-31",
@@ -26,8 +24,7 @@
     "venue": "AEII Fraternity Halloween",
     "time": "10 PM–12 AM",
     "format": "Full Band",
-    "flyer": "",
-    "tickets": ""
+    "flyer": "/assets/halloweenbandpartycompressed.jpg"
   },
   {
     "date": "2026-11-06",
@@ -36,8 +33,7 @@
     "venue": "Bearden Beer Market",
     "time": "7–9 PM",
     "format": "Solo",
-    "flyer": "/assets/flyer-bearden-beer-market.jpg",
-    "tickets": ""
+    "flyer": "/assets/flyer-bearden-beer-market.jpg"
   },
   {
     "date": "2026-11-13",
@@ -46,8 +42,7 @@
     "venue": "Cowboy Cantina",
     "time": "9 PM–12 AM",
     "format": "Solo",
-    "flyer": "/assets/flyer-cowboy-cantina.jpg",
-    "tickets": ""
+    "flyer": "/assets/flyer-cowboy-cantina.jpg"
   },
   {
     "date": "2026-11-14",
@@ -55,8 +50,22 @@
     "end": "2026-11-14T22:00:00",
     "venue": "LiterBoard",
     "time": "8–10 PM",
-    "format": "Full Band",
-    "flyer": "",
-    "tickets": ""
+    "format": "Full Band"
+  },
+  {
+    "date": "2026-11-04",
+    "start": "2026-11-04T18:30:00",
+    "end": "2026-11-04T20:30:00",
+    "venue": "The Hill: Bar & Grill",
+    "time": "6:30–8:30 PM",
+    "format": "Duo with Sky Hatcher"
+  },
+  {
+    "date": "2026-11-18",
+    "start": "2026-11-18T18:30:00",
+    "end": "2026-11-18T20:30:00",
+    "venue": "The Hill: Bar and Grill",
+    "time": "6:30–8:30 PM",
+    "format": "Duo with Sky Hatcher"
   }
 ]
