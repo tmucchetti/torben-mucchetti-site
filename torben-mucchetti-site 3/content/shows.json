@@ -67,5 +67,21 @@
     "venue": "The Hill: Bar and Grill",
     "time": "6:30–8:30 PM",
     "format": "Duo with Sky Hatcher"
+  },
+  {
+    "date": "2026-11-15",
+    "start": "2026-11-15T13:00:00",
+    "end": "2026-11-15T16:00:00",
+    "venue": "Kerns Food Hall",
+    "time": "1–4 PM",
+    "format": "Solo Acoustic"
+  },
+  {
+    "date": "2026-12-04",
+    "start": "2026-12-04T18:00:00",
+    "end": "2026-12-04T21:00:00",
+    "venue": "Kerns Food Hall",
+    "time": "6–9 PM",
+    "format": "Trio"
   }
 ]
