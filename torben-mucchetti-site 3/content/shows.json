@@ -83,5 +83,13 @@
     "venue": "Kerns Food Hall",
     "time": "6–9 PM",
     "format": "Trio"
+  },
+  {
+    "date": "2026-12-18",
+    "start": "2026-12-18T18:00:00",
+    "end": "2026-12-18T20:00:00",
+    "venue": "BabyCat Brewery – Bethesda",
+    "time": "6–8 PM",
+    "format": "Solo Acoustic"
   }
 ]
